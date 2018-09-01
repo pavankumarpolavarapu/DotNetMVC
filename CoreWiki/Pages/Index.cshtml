@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+ViewData["Title"] = "Home page";
+}
+<style>
+    .cleanlook {
+        font-size: 1.5em;
+        width: 80%;
+    }
+    .cleanlook th,td{
+                text-align: center;
+    }
+</style>
+
+<h2>Index Page</h2>
+<br/>
+<table border=1; class="cleanlook">
+    <thead>Page Table</thead>
+    <tr>
+        <th>Page Created</th>
+        <th>Page URL</th>
+    </tr>
+    <tr>
+        <td>ClickBait</td>
+        <td><a href="/ClickBait">ClickBait</a></td>
+    </tr>
+    <tr>
+        <td>Sticky Content</td>
+        <td><a href="/StickyContent">StickyContent</a></td>
+    </tr>
+    <tr>
+        <td>Chum Box</td>
+        <td><a href="/ChumBox">ChumBox</a></td>
+    </tr>
+    <tr>
+</table>
+
+<hr/>
+<h2>Site Map</h2>
+
+<div class="cleanlook">
+    <ul>
+        <li>New Pages</li>
+        <ul>
+
+            <li><a asp-page="/ClickBait">Click Bait</a></li>
+            <li><a asp-page="/StickyContent">Sticky Content</a></li>
+            <li><a asp-page="/ChumBox">Chum Box</a></li>
+        </ul>
+        <li>Existing Pages</li>
+        <ul>
+            <li> <a asp-page="/Index">Home</a> </li>
+            <li> <a asp-page="/About">About</a> </li>
+            <li> <a asp-page="/Contact">Contact</a> </li>
+        </ul>
+    </ul>
+</div>

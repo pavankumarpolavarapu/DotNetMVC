@@ -1,0 +1,49 @@
+@page
+@model CoreCRUD.Pages.Collectibles.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Collectible</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Collectible.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Collectible.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Collectible.DateOfPurchase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Collectible.DateOfPurchase)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Collectible.Category)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Collectible.Category)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Collectible.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Collectible.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Collectible.ManufacturerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Collectible.ManufacturerID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Collectible.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

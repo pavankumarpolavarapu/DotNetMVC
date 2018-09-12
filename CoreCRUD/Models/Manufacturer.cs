@@ -14,6 +14,8 @@ namespace CoreCRUD.Models
         public string Name { get; set; }
         public int Model { get; set; }
         public ICollection<Collectible> Collectibles { get; set; }
+
+        //Bool was throwing an error
     }
 }
             

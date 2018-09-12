@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreCRUD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20180911061205_InitialCreate")]
+    [Migration("20180912150718_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,7 @@ namespace CoreCRUD.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<decimal>("Price");
+                    b.Property<decimal?>("Price");
 
                     b.HasKey("Id");
 

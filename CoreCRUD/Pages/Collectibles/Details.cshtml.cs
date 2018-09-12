@@ -27,12 +27,15 @@ namespace CoreCRUD.Pages.Collectibles
                 return NotFound();
             }
 
-            Collectible = await _context.Collectible.FirstOrDefaultAsync(m => m.Id == id);
+            Collectible = await _context.Collectible
+            .Include(e => e.Manufacturer)
+            .FirstOrDefaultAsync(m => m.Id == id);
 
             if (Collectible == null)
             {
                 return NotFound();
             }
+            
             return Page();
         }
     }

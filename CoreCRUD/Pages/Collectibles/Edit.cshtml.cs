@@ -35,6 +35,7 @@ namespace CoreCRUD.Pages.Collectibles
             {
                 return NotFound();
             }
+            ViewData["ManufacturerID"] = new SelectList(_context.Set<Manufacturer>(), "ID", "Name");
             return Page();
         }
 

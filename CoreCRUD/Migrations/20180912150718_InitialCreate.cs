@@ -30,7 +30,7 @@ namespace CoreCRUD.Migrations
                     Name = table.Column<string>(nullable: true),
                     DateOfPurchase = table.Column<DateTime>(nullable: false),
                     Category = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(nullable: false),
+                    Price = table.Column<decimal>(nullable: true),
                     ManufacturerID = table.Column<string>(nullable: true),
                     ManufacturerID1 = table.Column<int>(nullable: true)
                 },

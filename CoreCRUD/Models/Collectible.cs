@@ -14,7 +14,7 @@ namespace CoreCRUD.Models
         public string Name { get; set; }
         public DateTime DateOfPurchase { get; set; }
         public string Category { get; set; }
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
         public string ManufacturerID { get; set; }
         public Manufacturer Manufacturer { get; set; }
     }

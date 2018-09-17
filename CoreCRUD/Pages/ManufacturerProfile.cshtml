@@ -1,0 +1,33 @@
+﻿@page
+@model ManufacturerProfileModel
+@{
+}
+<h1> Manufacturer Profile for <strong> @Model.Manufacturer.Name </strong> </h1>
+<h3>@Model.Manufacturer.Name is designated as 
+    @if( @Model.Manufacturer.Count > 2 ) 
+    { 
+        <strong> Important Manufacturer </strong>
+    }else{ 
+    <strong> Normal Manufacturer </strong>
+    }
+</h3>
+
+
+<table class="table">
+ <thead>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+ </thead>
+<tbody>
+@foreach (var item in Model.Manufacturer.Collectibles)
+{
+<tr>
+<td>@item.Name</td>
+<td>@item.Category</td>
+<td>@item.Price</td>
+</tr>
+}
+
+</tbody>
+</table>

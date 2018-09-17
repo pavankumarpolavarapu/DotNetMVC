@@ -26,7 +26,9 @@
 @foreach (var item in Model.Manufacturer) {
         <tr>
             <td>
+                <a href="https://localhost:5001/ManufacturerProfile?id=@Html.DisplayFor(modelItem => item.ID)">
                 @Html.DisplayFor(modelItem => item.Name)
+                </a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Model)

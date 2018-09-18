@@ -25,6 +25,12 @@ namespace CoreCRUD
                                     .Include(col => col.Collectibles)
                                     .FirstOrDefault(man => man.ID == id);
 
+
+            if (Manufacturer == null)
+            {
+                return NotFound();
+            }
+
             return Page();
         }
     }

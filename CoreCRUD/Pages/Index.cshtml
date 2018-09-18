@@ -1,15 +1,54 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+ViewData["Title"] = "Home page";
 }
 
 <div id="col-md-12">
     <div class="col-md-6">
-        <hr/>
-        <p>Collectibles are tracked in our database, Just visit the Collectibles/Manufacturers page and provide us the details, we will keep a note of them. </p>
+        <hr />
+        <p>Collectibles are tracked in our database, Just visit the Collectibles/Manufacturers page and provide us the
+            details, we will keep a note of them. </p>
+        <table class="table">
+            <tr>
+            <th>Number of Manufacturers</th>
+            <td>@Model.ManufacturerCount</td>
+            </tr>
+                        <tr>
+            <th>Number of Collectibles</th>
+            <td>@Model.CollectibleCount</td>
+            </tr>
+                     <tr>
+            <th>Precious Collectible</th>
+            <td>@Model.MostPreciousItem.Name</td>
+            </tr>
+            <tr>
+            <th>Oldest Collectible</th>
+            <td>@Model.OldestItem.Name</td>
+            </tr>
+        </table>
     </div>
     <div class="col-md-6">
-        <img src="https://sep.yimg.com/ay/matrixcollectibles/avengers-age-of-ultron-cosbaby-collectible-set-of-3-pre-order-3.gif" alt="Collectibles" height="80%" width="80%"/>
+        
+
+        <div class="panel-group">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Manufacturer Profile Links</div>
+                    <div class="panel-body">
+                        <a href="https://localhost:5001/ManufacturerProfile?id=1" target="_blank">Link 1</a><br/>
+                        <a href="https://localhost:5001/ManufacturerProfile?id=2" target="_blank">Link 2</a><br/>
+                        <a href="https://localhost:5001/ManufacturerProfile?id=3" target="_blank">Link 3</a><br/>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Auction Page Link</div>
+                    <div class="panel-body">
+                        <a href="https://localhost:5001/Auction" target="_blank">Auction Page</a><br/>
+                </div>
+            </div>
+        </div>
+
     </div>
+    <!-- <img src="https://sep.yimg.com/ay/matrixcollectibles/avengers-age-of-ultron-cosbaby-collectible-set-of-3-pre-order-3.gif" alt="Collectibles" height="100%" width="100%"/> -->
 </div>

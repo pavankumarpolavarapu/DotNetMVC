@@ -1,0 +1,40 @@
+﻿@page
+@model AuctionModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Date of Purchase</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Manufacturer Name</th>
+        <th>Wanna buy?</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.Collectibles){
+    <tr>
+        <td>
+            @item.Name
+        </td>
+        <td>
+            @item.DateOfPurchase 
+        </td>
+        <td>
+            @item.Category
+        </td>
+        <td>
+            @item.Price
+        </td>
+        <td>
+            @item.Manufacturer.Name
+        </td>
+        <td>
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </button>
+        </td>
+    </tr>
+    }
+</table>

@@ -2,6 +2,7 @@
 using System;
 using System.Text;
 using System.Linq;
+using CoreCRUD.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -18,7 +19,7 @@ namespace CoreCRUD.Models
 
         //Bool was throwing an error
         [NotMapped]
-        public int Count {
+        public int? Count {
             get{
                 return Collectibles.Count();
             }
